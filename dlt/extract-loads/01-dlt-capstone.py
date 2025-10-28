@@ -257,6 +257,72 @@ def ncr_valenzuela():
     FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 Valenzuela - MEMBERS.CSV")
     yield pd.read_csv(FILE_PATH).astype(str)
 
+# region i
+@dlt.resource(name="i_ilocos_n")
+def i_ilocos_n():
+    ROOT_DIR = os.path.dirname(__file__)
+    STAGING_DIR = os.path.join(ROOT_DIR, "staging", "capstone")
+    FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 Ilocos Norte - MEMBERS.CSV")
+    yield pd.read_csv(FILE_PATH).astype(str)
+
+@dlt.resource(name="i_ilocos_s")
+def i_ilocos_s():
+    ROOT_DIR = os.path.dirname(__file__)
+    STAGING_DIR = os.path.join(ROOT_DIR, "staging", "capstone")
+    FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 Ilocos Sur - MEMBERS.CSV")
+    yield pd.read_csv(FILE_PATH).astype(str)
+
+@dlt.resource(name="i_launion")
+def i_launion():
+    ROOT_DIR = os.path.dirname(__file__)
+    STAGING_DIR = os.path.join(ROOT_DIR, "staging", "capstone")
+    FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 La Union - MEMBERS.CSV")
+    yield pd.read_csv(FILE_PATH).astype(str)
+
+@dlt.resource(name="i_pangasinan")
+def i_pangasinan():
+    ROOT_DIR = os.path.dirname(__file__)
+    STAGING_DIR = os.path.join(ROOT_DIR, "staging", "capstone")
+    FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 Pangasinan MEMBERS.CSV")
+    yield pd.read_csv(FILE_PATH).astype(str)
+
+# region ii
+@dlt.resource(name="ii_batanes")
+def ii_batanes():
+    ROOT_DIR = os.path.dirname(__file__)
+    STAGING_DIR = os.path.join(ROOT_DIR, "staging", "capstone")
+    FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 Batanes - MEMBERS.CSV")
+    yield pd.read_csv(FILE_PATH).astype(str)
+
+@dlt.resource(name="ii_cagayan")
+def ii_cagayan():
+    ROOT_DIR = os.path.dirname(__file__)
+    STAGING_DIR = os.path.join(ROOT_DIR, "staging", "capstone")
+    FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 Cagayan - MEMBERS.CSV")
+    yield pd.read_csv(FILE_PATH).astype(str)
+
+@dlt.resource(name="ii_isabela")
+def ii_isabela():
+    ROOT_DIR = os.path.dirname(__file__)
+    STAGING_DIR = os.path.join(ROOT_DIR, "staging", "capstone")
+    FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 Isabela - MEMBERS.CSV")
+    yield pd.read_csv(FILE_PATH).astype(str)
+
+@dlt.resource(name="ii_nueva_v")
+def ii_nueva_v():
+    ROOT_DIR = os.path.dirname(__file__)
+    STAGING_DIR = os.path.join(ROOT_DIR, "staging", "capstone")
+    FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 Nueva Vizcaya - MEMBERS.CSV")
+    yield pd.read_csv(FILE_PATH).astype(str)
+
+@dlt.resource(name="ii_quirino")
+def ii_quirino():
+    ROOT_DIR = os.path.dirname(__file__)
+    STAGING_DIR = os.path.join(ROOT_DIR, "staging", "capstone")
+    FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 Quirino - MEMBERS.CSV")
+    yield pd.read_csv(FILE_PATH).astype(str)
+
+
 def run():
     p = dlt.pipeline(
         pipeline_name="01-dlt-capstone-pipeline",
@@ -343,6 +409,28 @@ def run():
     info1 = p.run(ncr_taguig())
     print("records loaded:", info1)
     info1 = p.run(ncr_valenzuela())
+    print("records loaded:", info1)
+
+# region i
+    info1 = p.run(i_ilocos_n())
+    print("records loaded:", info1)
+    info1 = p.run(i_ilocos_s())
+    print("records loaded:", info1)
+    info1 = p.run(i_launion())
+    print("records loaded:", info1)
+    info1 = p.run(i_pangasinan())
+    print("records loaded:", info1)
+
+# region ii
+    info1 = p.run(ii_batanes())
+    print("records loaded:", info1)
+    info1 = p.run(ii_cagayan())
+    print("records loaded:", info1)
+    info1 = p.run(ii_isabela())
+    print("records loaded:", info1)
+    info1 = p.run(ii_nueva_v())
+    print("records loaded:", info1)
+    info1 = p.run(ii_quirino())
     print("records loaded:", info1)
 
 
