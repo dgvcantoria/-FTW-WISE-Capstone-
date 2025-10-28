@@ -1,0 +1,354 @@
+import os
+import dlt, pandas as pd
+
+# barmm
+@dlt.resource(name="barmm_basilan")
+def barmm_basilan():
+    ROOT_DIR = os.path.dirname(__file__)
+    STAGING_DIR = os.path.join(ROOT_DIR, "staging", "capstone")
+    FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 Basilan - MEMBERS.CSV")
+    yield pd.read_csv(FILE_PATH).astype(str)
+
+@dlt.resource(name="barmm_interim")
+def barmm_interim():
+    ROOT_DIR = os.path.dirname(__file__)
+    STAGING_DIR = os.path.join(ROOT_DIR, "staging", "capstone")
+    FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 Interim Province - MEMBERS.CSV")
+    yield pd.read_csv(FILE_PATH).astype(str)
+
+@dlt.resource(name="barmm_lanaods")
+def barmm_lanaods():
+    ROOT_DIR = os.path.dirname(__file__)
+    STAGING_DIR = os.path.join(ROOT_DIR, "staging", "capstone")
+    FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 Lanao Del Sur - MEMBERS.CSV")
+    yield pd.read_csv(FILE_PATH).astype(str)
+
+@dlt.resource(name="barmm_maguindanao")
+def barmm_maguindanao():
+    ROOT_DIR = os.path.dirname(__file__)
+    STAGING_DIR = os.path.join(ROOT_DIR, "staging", "capstone")
+    FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 Maguindanao - MEMBERS.CSV")
+    yield pd.read_csv(FILE_PATH).astype(str)
+
+@dlt.resource(name="barmm_sulu")
+def barmm_sulu():
+    ROOT_DIR = os.path.dirname(__file__)
+    STAGING_DIR = os.path.join(ROOT_DIR, "staging", "capstone")
+    FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 Sulu - MEMBERS.CSV")
+    yield pd.read_csv(FILE_PATH).astype(str)
+
+@dlt.resource(name="barmm_tawi")
+def barmm_tawi():
+    ROOT_DIR = os.path.dirname(__file__)
+    STAGING_DIR = os.path.join(ROOT_DIR, "staging", "capstone")
+    FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 Tawi Tawi - MEMBERS.CSV")
+    yield pd.read_csv(FILE_PATH).astype(str)
+
+# car
+@dlt.resource(name="car_abra")
+def car_abra():
+    ROOT_DIR = os.path.dirname(__file__)
+    STAGING_DIR = os.path.join(ROOT_DIR, "staging", "capstone")
+    FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 Abra - MEMBERS.CSV")
+    yield pd.read_csv(FILE_PATH).astype(str)
+
+@dlt.resource(name="car_apayao")
+def car_apayao():
+    ROOT_DIR = os.path.dirname(__file__)
+    STAGING_DIR = os.path.join(ROOT_DIR, "staging", "capstone")
+    FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 Apayao - MEMBERS.CSV")
+    yield pd.read_csv(FILE_PATH).astype(str)
+
+@dlt.resource(name="car_baguio")
+def car_baguio():
+    ROOT_DIR = os.path.dirname(__file__)
+    STAGING_DIR = os.path.join(ROOT_DIR, "staging", "capstone")
+    FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 Baguio City - MEMBERS.CSV")
+    yield pd.read_csv(FILE_PATH).astype(str)
+
+@dlt.resource(name="car_benguet")
+def car_benguet():
+    ROOT_DIR = os.path.dirname(__file__)
+    STAGING_DIR = os.path.join(ROOT_DIR, "staging", "capstone")
+    FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 Benguet - MEMBERS.CSV")
+    yield pd.read_csv(FILE_PATH).astype(str)
+
+@dlt.resource(name="car_ifugao")
+def car_ifugao():
+    ROOT_DIR = os.path.dirname(__file__)
+    STAGING_DIR = os.path.join(ROOT_DIR, "staging", "capstone")
+    FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 Ifugao - MEMBERS.CSV")
+    yield pd.read_csv(FILE_PATH).astype(str)
+
+@dlt.resource(name="car_kalinga")
+def car_kalinga():
+    ROOT_DIR = os.path.dirname(__file__)
+    STAGING_DIR = os.path.join(ROOT_DIR, "staging", "capstone")
+    FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 Kalinga - MEMBERS.CSV")
+    yield pd.read_csv(FILE_PATH).astype(str)
+
+@dlt.resource(name="car_mountain")
+def car_mountain():
+    ROOT_DIR = os.path.dirname(__file__)
+    STAGING_DIR = os.path.join(ROOT_DIR, "staging", "capstone")
+    FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 Mountain Province - MEMBERS.CSV")
+    yield pd.read_csv(FILE_PATH).astype(str)
+
+# xiii - caraga
+@dlt.resource(name="xiii_agusan_dn")
+def xiii_agusan_dn():
+    ROOT_DIR = os.path.dirname(__file__)
+    STAGING_DIR = os.path.join(ROOT_DIR, "staging", "capstone")
+    FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 Agusan Del Norte - MEMBERS.CSV")
+    yield pd.read_csv(FILE_PATH).astype(str)
+
+@dlt.resource(name="xiii_agusan_ds")
+def xiii_agusan_ds():
+    ROOT_DIR = os.path.dirname(__file__)
+    STAGING_DIR = os.path.join(ROOT_DIR, "staging", "capstone")
+    FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 Agusan Del Sur - MEMBERS.CSV")
+    yield pd.read_csv(FILE_PATH).astype(str)
+
+@dlt.resource(name="xiii_butuan")
+def xiii_butuan():
+    ROOT_DIR = os.path.dirname(__file__)
+    STAGING_DIR = os.path.join(ROOT_DIR, "staging", "capstone")
+    FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 Butuan City - MEMBERS.CSV")
+    yield pd.read_csv(FILE_PATH).astype(str)
+
+@dlt.resource(name="xiii_dinagat")
+def xiii_dinagat():
+    ROOT_DIR = os.path.dirname(__file__)
+    STAGING_DIR = os.path.join(ROOT_DIR, "staging", "capstone")
+    FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 Dinagat Islands - MEMBERS.CSV")
+    yield pd.read_csv(FILE_PATH).astype(str)
+
+@dlt.resource(name="xiii_surigao_dn")
+def xiii_surigao_dn():
+    ROOT_DIR = os.path.dirname(__file__)
+    STAGING_DIR = os.path.join(ROOT_DIR, "staging", "capstone")
+    FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 Surigao Del Norte - MEMBERS.CSV")
+    yield pd.read_csv(FILE_PATH).astype(str)
+
+@dlt.resource(name="xiii_surigao_ds")
+def xiii_surigao_ds():
+    ROOT_DIR = os.path.dirname(__file__)
+    STAGING_DIR = os.path.join(ROOT_DIR, "staging", "capstone")
+    FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 Surigao Del Sur - MEMBERS.CSV")
+    yield pd.read_csv(FILE_PATH).astype(str)
+
+# ncr
+@dlt.resource(name="ncr_caloocan")
+def ncr_caloocan():
+    ROOT_DIR = os.path.dirname(__file__)
+    STAGING_DIR = os.path.join(ROOT_DIR, "staging", "capstone")
+    FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 Caloocan - MEMBERS.CSV")
+    yield pd.read_csv(FILE_PATH).astype(str)
+
+@dlt.resource(name="ncr_laspinas")
+def ncr_laspinas():
+    ROOT_DIR = os.path.dirname(__file__)
+    STAGING_DIR = os.path.join(ROOT_DIR, "staging", "capstone")
+    FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 Las Piñas - MEMBERS.CSV")
+    yield pd.read_csv(FILE_PATH).astype(str)
+
+@dlt.resource(name="ncr_makati")
+def ncr_makati():
+    ROOT_DIR = os.path.dirname(__file__)
+    STAGING_DIR = os.path.join(ROOT_DIR, "staging", "capstone")
+    FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 Makati - MEMBERS.CSV")
+    yield pd.read_csv(FILE_PATH).astype(str)
+
+@dlt.resource(name="ncr_malabon")
+def ncr_malabon():
+    ROOT_DIR = os.path.dirname(__file__)
+    STAGING_DIR = os.path.join(ROOT_DIR, "staging", "capstone")
+    FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 Malabon - MEMBERS.CSV")
+    yield pd.read_csv(FILE_PATH).astype(str)
+
+@dlt.resource(name="ncr_mandaluyong")
+def ncr_mandaluyong():
+    ROOT_DIR = os.path.dirname(__file__)
+    STAGING_DIR = os.path.join(ROOT_DIR, "staging", "capstone")
+    FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 Mandaluyong - MEMBERS.CSV")
+    yield pd.read_csv(FILE_PATH).astype(str)
+
+@dlt.resource(name="ncr_manila")
+def ncr_manila():
+    ROOT_DIR = os.path.dirname(__file__)
+    STAGING_DIR = os.path.join(ROOT_DIR, "staging", "capstone")
+    FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 Manila - MEMBERS.CSV")
+    yield pd.read_csv(FILE_PATH).astype(str)
+
+@dlt.resource(name="ncr_marikina")
+def ncr_marikina():
+    ROOT_DIR = os.path.dirname(__file__)
+    STAGING_DIR = os.path.join(ROOT_DIR, "staging", "capstone")
+    FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 Marikina - MEMBERS.CSV")
+    yield pd.read_csv(FILE_PATH).astype(str)
+
+@dlt.resource(name="ncr_muntinlupa")
+def ncr_muntinlupa():
+    ROOT_DIR = os.path.dirname(__file__)
+    STAGING_DIR = os.path.join(ROOT_DIR, "staging", "capstone")
+    FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 Muntinlupa - MEMBERS.CSV")
+    yield pd.read_csv(FILE_PATH).astype(str)
+
+@dlt.resource(name="ncr_navotas")
+def ncr_navotas():
+    ROOT_DIR = os.path.dirname(__file__)
+    STAGING_DIR = os.path.join(ROOT_DIR, "staging", "capstone")
+    FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 Navotas - MEMBERS.CSV")
+    yield pd.read_csv(FILE_PATH).astype(str)
+
+@dlt.resource(name="ncr_paranaque")
+def ncr_paranaque():
+    ROOT_DIR = os.path.dirname(__file__)
+    STAGING_DIR = os.path.join(ROOT_DIR, "staging", "capstone")
+    FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 Parañaque - MEMBERS.CSV")
+    yield pd.read_csv(FILE_PATH).astype(str)
+
+@dlt.resource(name="ncr_pasay")
+def ncr_pasay():
+    ROOT_DIR = os.path.dirname(__file__)
+    STAGING_DIR = os.path.join(ROOT_DIR, "staging", "capstone")
+    FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 Pasay - MEMBERS.CSV")
+    yield pd.read_csv(FILE_PATH).astype(str)
+
+@dlt.resource(name="ncr_pasig")
+def ncr_pasig():
+    ROOT_DIR = os.path.dirname(__file__)
+    STAGING_DIR = os.path.join(ROOT_DIR, "staging", "capstone")
+    FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 Pasig - MEMBERS.CSV")
+    yield pd.read_csv(FILE_PATH).astype(str)
+
+@dlt.resource(name="ncr_pateros")
+def ncr_pateros():
+    ROOT_DIR = os.path.dirname(__file__)
+    STAGING_DIR = os.path.join(ROOT_DIR, "staging", "capstone")
+    FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 Pateros - MEMBERS.CSV")
+    yield pd.read_csv(FILE_PATH).astype(str)
+
+@dlt.resource(name="ncr_quezon")
+def ncr_quezon():
+    ROOT_DIR = os.path.dirname(__file__)
+    STAGING_DIR = os.path.join(ROOT_DIR, "staging", "capstone")
+    FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 Quezon City - MEMBERS.CSV")
+    yield pd.read_csv(FILE_PATH).astype(str)
+
+@dlt.resource(name="ncr_sanjuan")
+def ncr_sanjuan():
+    ROOT_DIR = os.path.dirname(__file__)
+    STAGING_DIR = os.path.join(ROOT_DIR, "staging", "capstone")
+    FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 San Juan - MEMBERS.CSV")
+    yield pd.read_csv(FILE_PATH).astype(str)
+
+@dlt.resource(name="ncr_taguig")
+def ncr_taguig():
+    ROOT_DIR = os.path.dirname(__file__)
+    STAGING_DIR = os.path.join(ROOT_DIR, "staging", "capstone")
+    FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 Taguig - MEMBERS.CSV")
+    yield pd.read_csv(FILE_PATH).astype(str)
+
+@dlt.resource(name="ncr_valenzuela")
+def ncr_valenzuela():
+    ROOT_DIR = os.path.dirname(__file__)
+    STAGING_DIR = os.path.join(ROOT_DIR, "staging", "capstone")
+    FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 Valenzuela - MEMBERS.CSV")
+    yield pd.read_csv(FILE_PATH).astype(str)
+
+def run():
+    p = dlt.pipeline(
+        pipeline_name="01-dlt-capstone-pipeline",
+        destination="clickhouse",
+        dataset_name="psa_census_2020",
+    )
+    print("Fetching and loading...")
+
+    # barmm
+    info1 = p.run(barmm_basilan())
+    print("records loaded:", info1)
+    info1 = p.run(barmm_interim())
+    print("records loaded:", info1)
+    info1 = p.run(barmm_lanaods())
+    print("records loaded:", info1)
+    info1 = p.run(barmm_maguindanao())
+    print("records loaded:", info1)
+    info1 = p.run(barmm_sulu())
+    print("records loaded:", info1)
+    info1 = p.run(barmm_tawi())
+    print("records loaded:", info1)
+
+    # car
+    info1 = p.run(car_abra())
+    print("records loaded:", info1)
+    info1 = p.run(car_apayao())
+    print("records loaded:", info1)
+    info1 = p.run(car_baguio())
+    print("records loaded:", info1)
+    info1 = p.run(car_benguet())
+    print("records loaded:", info1)
+    info1 = p.run(car_ifugao())
+    print("records loaded:", info1)
+    info1 = p.run(car_kalinga())
+    print("records loaded:", info1)
+    info1 = p.run(car_mountain())
+    print("records loaded:", info1)
+
+    # xiii
+    info1 = p.run(xiii_agusan_dn())
+    print("records loaded:", info1)
+    info1 = p.run(xiii_agusan_ds())
+    print("records loaded:", info1)
+    info1 = p.run(xiii_butuan())
+    print("records loaded:", info1)
+    info1 = p.run(xiii_dinagat())
+    print("records loaded:", info1)
+    info1 = p.run(xiii_surigao_dn())
+    print("records loaded:", info1)
+    info1 = p.run(xiii_surigao_ds())
+    print("records loaded:", info1)
+
+    # ncr
+    info1 = p.run(ncr_caloocan())
+    print("records loaded:", info1)
+    info1 = p.run(ncr_laspinas())
+    print("records loaded:", info1)
+    info1 = p.run(ncr_makati())
+    print("records loaded:", info1)
+    info1 = p.run(ncr_malabon())
+    print("records loaded:", info1)
+    info1 = p.run(ncr_mandaluyong())
+    print("records loaded:", info1)
+    info1 = p.run(ncr_manila())
+    print("records loaded:", info1)
+    info1 = p.run(ncr_marikina())
+    print("records loaded:", info1)
+    info1 = p.run(ncr_muntinlupa())
+    print("records loaded:", info1)
+    info1 = p.run(ncr_navotas())
+    print("records loaded:", info1)
+    info1 = p.run(ncr_paranaque())
+    print("records loaded:", info1)
+    info1 = p.run(ncr_pasay())
+    print("records loaded:", info1)
+    info1 = p.run(ncr_pasig())
+    print("records loaded:", info1)
+    info1 = p.run(ncr_pateros())
+    print("records loaded:", info1)
+    info1 = p.run(ncr_quezon())
+    print("records loaded:", info1)
+    info1 = p.run(ncr_sanjuan())
+    print("records loaded:", info1)
+    info1 = p.run(ncr_taguig())
+    print("records loaded:", info1)
+    info1 = p.run(ncr_valenzuela())
+    print("records loaded:", info1)
+
+
+if __name__ == "__main__":
+    run()
+
+    # to run
+    # docker compose --profile jobs run --rm \  
+    # dlt python extract-loads/01-dlt-capstone-pipeline.py
