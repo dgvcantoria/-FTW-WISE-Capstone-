@@ -322,6 +322,51 @@ def ii_quirino():
     FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 Quirino - MEMBERS.CSV")
     yield pd.read_csv(FILE_PATH).astype(str)
 
+# region iii
+
+# region iv-a
+@dlt.resource(name="iva_batangas")
+def iva_batangas():
+    ROOT_DIR = os.path.dirname(__file__)
+    STAGING_DIR = os.path.join(ROOT_DIR, "staging", "capstone")
+    FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 Batangas - MEMBERS.CSV")
+    yield pd.read_csv(FILE_PATH).astype(str)
+
+@dlt.resource(name="iva_cavite")
+def iva_cavite():
+    ROOT_DIR = os.path.dirname(__file__)
+    STAGING_DIR = os.path.join(ROOT_DIR, "staging", "capstone")
+    FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 Cavite - MEMBERS.CSV")
+    yield pd.read_csv(FILE_PATH).astype(str)
+
+@dlt.resource(name="iva_laguna")
+def iva_laguna():
+    ROOT_DIR = os.path.dirname(__file__)
+    STAGING_DIR = os.path.join(ROOT_DIR, "staging", "capstone")
+    FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 Laguna - MEMBERS.CSV")
+    yield pd.read_csv(FILE_PATH).astype(str)
+
+@dlt.resource(name="iva_lucena")
+def iva_lucena():
+    ROOT_DIR = os.path.dirname(__file__)
+    STAGING_DIR = os.path.join(ROOT_DIR, "staging", "capstone")
+    FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 Lucena City - MEMBERS.CSV")
+    yield pd.read_csv(FILE_PATH).astype(str)
+
+@dlt.resource(name="iva_quezon")
+def iva_quezon():
+    ROOT_DIR = os.path.dirname(__file__)
+    STAGING_DIR = os.path.join(ROOT_DIR, "staging", "capstone")
+    FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 Quezon - MEMBERS.CSV")
+    yield pd.read_csv(FILE_PATH).astype(str)
+
+@dlt.resource(name="iva_rizal")
+def iva_rizal():
+    ROOT_DIR = os.path.dirname(__file__)
+    STAGING_DIR = os.path.join(ROOT_DIR, "staging", "capstone")
+    FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 Rizal - MEMBERS.CSV")
+    yield pd.read_csv(FILE_PATH).astype(str)
+
 
 def run():
     p = dlt.pipeline(
@@ -431,6 +476,22 @@ def run():
     info1 = p.run(ii_nueva_v())
     print("records loaded:", info1)
     info1 = p.run(ii_quirino())
+    print("records loaded:", info1)
+
+# region iii
+    
+# region iv-a
+    info1 = p.run(iva_batangas())
+    print("records loaded:", info1)
+    info1 = p.run(iva_cavite())
+    print("records loaded:", info1)
+    info1 = p.run(iva_laguna())
+    print("records loaded:", info1)
+    info1 = p.run(iva_lucena())
+    print("records loaded:", info1)
+    info1 = p.run(iva_quezon())
+    print("records loaded:", info1)
+    info1 = p.run(iva_rizal())
     print("records loaded:", info1)
 
 
