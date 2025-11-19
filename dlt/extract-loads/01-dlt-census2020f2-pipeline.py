@@ -1,3 +1,5 @@
+#ingest psa census 2020 form 2 for demographics table
+
 import os
 import dlt, pandas as pd
 
@@ -92,49 +94,6 @@ def car_mountain():
     ROOT_DIR = os.path.dirname(__file__)
     STAGING_DIR = os.path.join(ROOT_DIR, "staging", "capstone")
     FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 Mountain Province - MEMBERS.CSV")
-    yield pd.read_csv(FILE_PATH).astype(str)
-
-# xiii - caraga
-@dlt.resource(name="xiii_agusan_dn")
-def xiii_agusan_dn():
-    ROOT_DIR = os.path.dirname(__file__)
-    STAGING_DIR = os.path.join(ROOT_DIR, "staging", "capstone")
-    FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 Agusan Del Norte - MEMBERS.CSV")
-    yield pd.read_csv(FILE_PATH).astype(str)
-
-@dlt.resource(name="xiii_agusan_ds")
-def xiii_agusan_ds():
-    ROOT_DIR = os.path.dirname(__file__)
-    STAGING_DIR = os.path.join(ROOT_DIR, "staging", "capstone")
-    FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 Agusan Del Sur - MEMBERS.CSV")
-    yield pd.read_csv(FILE_PATH).astype(str)
-
-@dlt.resource(name="xiii_butuan")
-def xiii_butuan():
-    ROOT_DIR = os.path.dirname(__file__)
-    STAGING_DIR = os.path.join(ROOT_DIR, "staging", "capstone")
-    FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 Butuan City - MEMBERS.CSV")
-    yield pd.read_csv(FILE_PATH).astype(str)
-
-@dlt.resource(name="xiii_dinagat")
-def xiii_dinagat():
-    ROOT_DIR = os.path.dirname(__file__)
-    STAGING_DIR = os.path.join(ROOT_DIR, "staging", "capstone")
-    FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 Dinagat Islands - MEMBERS.CSV")
-    yield pd.read_csv(FILE_PATH).astype(str)
-
-@dlt.resource(name="xiii_surigao_dn")
-def xiii_surigao_dn():
-    ROOT_DIR = os.path.dirname(__file__)
-    STAGING_DIR = os.path.join(ROOT_DIR, "staging", "capstone")
-    FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 Surigao Del Norte - MEMBERS.CSV")
-    yield pd.read_csv(FILE_PATH).astype(str)
-
-@dlt.resource(name="xiii_surigao_ds")
-def xiii_surigao_ds():
-    ROOT_DIR = os.path.dirname(__file__)
-    STAGING_DIR = os.path.join(ROOT_DIR, "staging", "capstone")
-    FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 Surigao Del Sur - MEMBERS.CSV")
     yield pd.read_csv(FILE_PATH).astype(str)
 
 # ncr
@@ -323,6 +282,68 @@ def ii_quirino():
     yield pd.read_csv(FILE_PATH).astype(str)
 
 # region iii
+@dlt.resource(name="iii_angeles")
+def iii_angeles():
+    ROOT_DIR = os.path.dirname(__file__)
+    STAGING_DIR = os.path.join(ROOT_DIR, "staging", "capstone")
+    FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 Angeles City - MEMBERS.CSV")
+    yield pd.read_csv(FILE_PATH).astype(str)
+
+@dlt.resource(name="iii_aurora")
+def iii_aurora():
+    ROOT_DIR = os.path.dirname(__file__)
+    STAGING_DIR = os.path.join(ROOT_DIR, "staging", "capstone")
+    FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 Aurora - MEMBERS.CSV")
+    yield pd.read_csv(FILE_PATH).astype(str)
+
+@dlt.resource(name="iii_bataan")
+def iii_bataan():
+    ROOT_DIR = os.path.dirname(__file__)
+    STAGING_DIR = os.path.join(ROOT_DIR, "staging", "capstone")
+    FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 Bataan - MEMBERS.CSV")
+    yield pd.read_csv(FILE_PATH).astype(str)
+
+@dlt.resource(name="iii_bulacan")
+def iii_bulacan():
+    ROOT_DIR = os.path.dirname(__file__)
+    STAGING_DIR = os.path.join(ROOT_DIR, "staging", "capstone")
+    FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 Bulacan - MEMBERS.CSV")
+    yield pd.read_csv(FILE_PATH).astype(str)
+
+@dlt.resource(name="iii_nueva_e")
+def iii_nueva_e():
+    ROOT_DIR = os.path.dirname(__file__)
+    STAGING_DIR = os.path.join(ROOT_DIR, "staging", "capstone")
+    FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 Nueva Ecija - MEMBERS.CSV")
+    yield pd.read_csv(FILE_PATH).astype(str)
+
+@dlt.resource(name="iii_olongapo")
+def iii_olongapo():
+    ROOT_DIR = os.path.dirname(__file__)
+    STAGING_DIR = os.path.join(ROOT_DIR, "staging", "capstone")
+    FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 Ologapo City - MEMBERS.CSV")
+    yield pd.read_csv(FILE_PATH).astype(str)
+
+@dlt.resource(name="iii_pampanga")
+def iii_pampanga():
+    ROOT_DIR = os.path.dirname(__file__)
+    STAGING_DIR = os.path.join(ROOT_DIR, "staging", "capstone")
+    FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 Pampanga - MEMBERS.CSV")
+    yield pd.read_csv(FILE_PATH).astype(str)
+
+@dlt.resource(name="iii_tarlac")
+def iii_tarlac():
+    ROOT_DIR = os.path.dirname(__file__)
+    STAGING_DIR = os.path.join(ROOT_DIR, "staging", "capstone")
+    FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 Tarlac - MEMBERS.CSV")
+    yield pd.read_csv(FILE_PATH).astype(str)
+
+@dlt.resource(name="iii_zambales")
+def iii_zambales():
+    ROOT_DIR = os.path.dirname(__file__)
+    STAGING_DIR = os.path.join(ROOT_DIR, "staging", "capstone")
+    FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 Zambales - MEMBERS.CSV")
+    yield pd.read_csv(FILE_PATH).astype(str)
 
 # region iv-a
 @dlt.resource(name="iv_a_batangas")
@@ -368,8 +389,8 @@ def iva_rizal():
     yield pd.read_csv(FILE_PATH).astype(str)
 
 # region iv-b
-@dlt.resource(name="iv_b_marinduque2")
-def iv_b_marinduque2():
+@dlt.resource(name="iv_b_marinduque")
+def iv_b_marinduque():
     ROOT_DIR = os.path.dirname(__file__)
     STAGING_DIR = os.path.join(ROOT_DIR, "staging", "capstone")
     FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 Marinduque - MEMBERS.CSV")
@@ -389,22 +410,22 @@ def iv_b_or_mindoro():
     FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 Oriental Mindoro - MEMBERS.CSV")
     yield pd.read_csv(FILE_PATH).astype(str)
 
-@dlt.resource(name="iv_b_palawan2")
-def iv_b_palawan2():
+@dlt.resource(name="iv_b_palawan")
+def iv_b_palawan():
     ROOT_DIR = os.path.dirname(__file__)
     STAGING_DIR = os.path.join(ROOT_DIR, "staging", "capstone")
     FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 Palawan - MEMBERS.CSV")
     yield pd.read_csv(FILE_PATH).astype(str)
 
-@dlt.resource(name="iv_b_puerto2")
-def iv_b_puerto2():
+@dlt.resource(name="iv_b_puerto")
+def iv_b_puerto():
     ROOT_DIR = os.path.dirname(__file__)
     STAGING_DIR = os.path.join(ROOT_DIR, "staging", "capstone")
     FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 Puerto Princesa - MEMBERS.CSV")
     yield pd.read_csv(FILE_PATH).astype(str)
 
-@dlt.resource(name="iv_b_romblon2")
-def iv_b_romblon2():
+@dlt.resource(name="iv_b_romblon")
+def iv_b_romblon():
     ROOT_DIR = os.path.dirname(__file__)
     STAGING_DIR = os.path.join(ROOT_DIR, "staging", "capstone")
     FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 Romblon - MEMBERS.CSV")
@@ -774,55 +795,48 @@ def xii_sultan():
     STAGING_DIR = os.path.join(ROOT_DIR, "staging", "capstone")
     FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 Sultan Kudarat - MEMBERS.CSV")
     yield pd.read_csv(FILE_PATH).astype(str)
-    
-# dim tables
-@dlt.resource(name="citizenship")
-def citizenship():
+
+# xiii - caraga
+@dlt.resource(name="xiii_agusan_dn")
+def xiii_agusan_dn():
     ROOT_DIR = os.path.dirname(__file__)
     STAGING_DIR = os.path.join(ROOT_DIR, "staging", "capstone")
-    FILE_PATH = os.path.join(STAGING_DIR, "citizenship.CSV")
+    FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 Agusan Del Norte - MEMBERS.CSV")
     yield pd.read_csv(FILE_PATH).astype(str)
 
-@dlt.resource(name="education")
-def education():
+@dlt.resource(name="xiii_agusan_ds")
+def xiii_agusan_ds():
     ROOT_DIR = os.path.dirname(__file__)
     STAGING_DIR = os.path.join(ROOT_DIR, "staging", "capstone")
-    FILE_PATH = os.path.join(STAGING_DIR, "education.CSV")
+    FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 Agusan Del Sur - MEMBERS.CSV")
     yield pd.read_csv(FILE_PATH).astype(str)
 
-@dlt.resource(name="geography")
-def geography():
+@dlt.resource(name="xiii_butuan")
+def xiii_butuan():
     ROOT_DIR = os.path.dirname(__file__)
     STAGING_DIR = os.path.join(ROOT_DIR, "staging", "capstone")
-    FILE_PATH = os.path.join(STAGING_DIR, "geography_id.CSV")
+    FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 Butuan City - MEMBERS.CSV")
     yield pd.read_csv(FILE_PATH).astype(str)
 
-@dlt.resource(name="marital_stat")
-def marital_stat():
+@dlt.resource(name="xiii_dinagat")
+def xiii_dinagat():
     ROOT_DIR = os.path.dirname(__file__)
     STAGING_DIR = os.path.join(ROOT_DIR, "staging", "capstone")
-    FILE_PATH = os.path.join(STAGING_DIR, "marital_status.CSV")
+    FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 Dinagat Islands - MEMBERS.CSV")
     yield pd.read_csv(FILE_PATH).astype(str)
 
-@dlt.resource(name="sex")
-def sex():
+@dlt.resource(name="xiii_surigao_dn")
+def xiii_surigao_dn():
     ROOT_DIR = os.path.dirname(__file__)
     STAGING_DIR = os.path.join(ROOT_DIR, "staging", "capstone")
-    FILE_PATH = os.path.join(STAGING_DIR, "sex.CSV")
+    FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 Surigao Del Norte - MEMBERS.CSV")
     yield pd.read_csv(FILE_PATH).astype(str)
 
-@dlt.resource(name="urban")
-def urban():
+@dlt.resource(name="xiii_surigao_ds")
+def xiii_surigao_ds():
     ROOT_DIR = os.path.dirname(__file__)
     STAGING_DIR = os.path.join(ROOT_DIR, "staging", "capstone")
-    FILE_PATH = os.path.join(STAGING_DIR, "urban-rural.CSV")
-    yield pd.read_csv(FILE_PATH).astype(str)
-
-@dlt.resource(name="region")
-def region():
-    ROOT_DIR = os.path.dirname(__file__)
-    STAGING_DIR = os.path.join(ROOT_DIR, "staging", "capstone")
-    FILE_PATH = os.path.join(STAGING_DIR, "region.CSV")
+    FILE_PATH = os.path.join(STAGING_DIR, "CPH PUF 2020 Surigao Del Sur - MEMBERS.CSV")
     yield pd.read_csv(FILE_PATH).astype(str)
 
 def run():
@@ -833,7 +847,7 @@ def run():
     )
     print("Fetching and loading...")
 
-    # barmm
+# barmm
     info1 = p.run(barmm_basilan())
     print("records loaded:", info1)
     info1 = p.run(barmm_interim())
@@ -847,7 +861,7 @@ def run():
     info1 = p.run(barmm_tawi())
     print("records loaded:", info1)
 
-    # car
+# car
     info1 = p.run(car_abra())
     print("records loaded:", info1)
     info1 = p.run(car_apayao())
@@ -863,21 +877,7 @@ def run():
     info1 = p.run(car_mountain())
     print("records loaded:", info1)
 
-    # xiii
-    info1 = p.run(xiii_agusan_dn())
-    print("records loaded:", info1)
-    info1 = p.run(xiii_agusan_ds())
-    print("records loaded:", info1)
-    info1 = p.run(xiii_butuan())
-    print("records loaded:", info1)
-    info1 = p.run(xiii_dinagat())
-    print("records loaded:", info1)
-    info1 = p.run(xiii_surigao_dn())
-    print("records loaded:", info1)
-    info1 = p.run(xiii_surigao_ds())
-    print("records loaded:", info1)
-
-    # ncr
+# ncr
     info1 = p.run(ncr_caloocan())
     print("records loaded:", info1)
     info1 = p.run(ncr_laspinas())
@@ -936,6 +936,22 @@ def run():
     print("records loaded:", info1)
 
 # region iii
+    info1 = p.run(iii_angeles())
+    print("records loaded:", info1)
+    info1 = p.run(iii_aurora())
+    print("records loaded:", info1)
+    info1 = p.run(iii_bataan())
+    print("records loaded:", info1)
+    info1 = p.run(iii_bulacan())
+    print("records loaded:", info1)
+    info1 = p.run(iii_nueva_e())
+    print("records loaded:", info1)
+    info1 = p.run(iii_olongapo())
+    print("records loaded:", info1)
+    info1 = p.run(iii_pampanga())
+    print("records loaded:", info1)
+    info1 = p.run(iii_zambales())
+    print("records loaded:", info1)
     
 # region iv-a
     info1 = p.run(iv_a_batangas())
@@ -954,9 +970,9 @@ def run():
 # region iv-b
     info1 = p.run(iv_b_marinduque())
     print("records loaded:", info1)
-    info1 = p.run(iv_b_occidental_m())
+    info1 = p.run(iv_b_occ_mindoro())
     print("records loaded:", info1)
-    info1 = p.run(iv_b_oriental_m())
+    info1 = p.run(iv_b_or_mindoro())
     print("records loaded:", info1)
     info1 = p.run(iv_b_palawan())
     print("records loaded:", info1)
@@ -1014,8 +1030,20 @@ def run():
     print("records loaded:", info1)
 
 # region viii
-
-
+    info1 = p.run(viii_biliran())
+    print("records loaded:", info1)
+    info1 = p.run(viii_esamar())
+    print("records loaded:", info1)
+    info1 = p.run(viii_leyte())
+    print("records loaded:", info1)
+    info1 = p.run(viii_nsamar())
+    print("records loaded:", info1)
+    info1 = p.run(viii_samar())
+    print("records loaded:", info1)
+    info1 = p.run(viii_sleyte())
+    print("records loaded:", info1)
+    info1 = p.run(viii_tacloban())
+    print("records loaded:", info1)
 
 # region ix
     info1 = p.run(ix_isabela())
@@ -1069,6 +1097,20 @@ def run():
     info1 = p.run(xii_scotabato())
     print("records loaded:", info1)
     info1 = p.run(xii_sultan())
+    print("records loaded:", info1)
+
+# xiii
+    info1 = p.run(xiii_agusan_dn())
+    print("records loaded:", info1)
+    info1 = p.run(xiii_agusan_ds())
+    print("records loaded:", info1)
+    info1 = p.run(xiii_butuan())
+    print("records loaded:", info1)
+    info1 = p.run(xiii_dinagat())
+    print("records loaded:", info1)
+    info1 = p.run(xiii_surigao_dn())
+    print("records loaded:", info1)
+    info1 = p.run(xiii_surigao_ds())
     print("records loaded:", info1)
 
 # dim tables
