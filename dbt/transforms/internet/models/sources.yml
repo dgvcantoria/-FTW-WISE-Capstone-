@@ -130,8 +130,12 @@ sources:
       - name: psa_census_2020_ref___geography
       - name: psa_census_2020_ref___marital_stat
       - name: psa_census_2020_ref___region
+      - name: psa_census_2020_ref___province
+      - name: psa_census_2020_ref___city
+      - name: psa_census_2020_ref___barangay
       - name: psa_census_2020_ref___sex
       - name: psa_census_2020_ref___urban
+      - name: psa_census_2020_ref___coordinates
       
       - name: comelec___voters_turnout_2022
       - name: comelec___registered_voters_2025
@@ -146,7 +150,6 @@ sources:
         description: CMCI 2022 data for component cities
       - name: highly_urbanized_cities
         description: CMCI 2022 data for highly urbanized cities
-      - name: geography___coordinates
 
       
   - name: clean_grp2
@@ -154,6 +157,9 @@ sources:
     tables:
       - name: stg_dim_geography
       - name: stg_dim_region
+      - name: stg_dim_province
+      - name: stg_dim_city
+      - name: stg_dim_barangay
       - name: stg_fact_internet
       - name: stg_internet_2020
       - name: stg_2019_social_media_penetration
@@ -179,6 +185,7 @@ sources:
       - name: Input_Data
       - name: Fact_Competitiveness_score
         description: Fact table with competitiveness scores joined with regional and voter data
+      - name: Dim_Province
       - name: Dim_Barangay
       - name: Dim_City
       - name: Dim_Education
