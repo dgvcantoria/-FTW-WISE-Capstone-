@@ -172,7 +172,8 @@ sources:
   - name: mart_grp2
     database: mart_grp2
     tables:
+      - name: Demographics_2020
+      - name: Voter_Turnout_2022
       - name: Input_Data
-
       - name: Fact_Competitiveness_score
         description: Fact table with competitiveness scores joined with regional and voter data
