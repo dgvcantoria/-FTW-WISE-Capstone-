@@ -4,8 +4,141 @@ sources:
   - name: raw_grp2
     database: raw_grp2 # Explicitly specify ClickHouse database
     tables:
+      - name: psa_census_2020_f2___barmm_basilan
+      - name: psa_census_2020_f2___barmm_interim
+      - name: psa_census_2020_f2___barmm_lanaods
+      - name: psa_census_2020_f2___barmm_maguindanao
+      - name: psa_census_2020_f2___barmm_sulu
+      - name: psa_census_2020_f2___barmm_tawi
+      - name: psa_census_2020_f2___car_abra
+      - name: psa_census_2020_f2___car_apayao
+      - name: psa_census_2020_f2___car_baguio
+      - name: psa_census_2020_f2___car_benguet
+      - name: psa_census_2020_f2___car_ifugao
+      - name: psa_census_2020_f2___car_kalinga
+      - name: psa_census_2020_f2___car_mountain
+      - name: psa_census_2020_f2___i_ilocos_n
+      - name: psa_census_2020_f2___i_ilocos_s
+      - name: psa_census_2020_f2___i_launion
+      - name: psa_census_2020_f2___i_pangasinan
+      - name: psa_census_2020_f2___ii_batanes
+      - name: psa_census_2020_f2___ii_cagayan
+      - name: psa_census_2020_f2___ii_isabela
+      - name: psa_census_2020_f2___ii_nueva_v
+      - name: psa_census_2020_f2___ii_quirino
+      - name: psa_census_2020_f2___iii_angeles
+      - name: psa_census_2020_f2___iii_aurora
+      - name: psa_census_2020_f2___iii_bataan
+      - name: psa_census_2020_f2___iii_bulacan
+      - name: psa_census_2020_f2___iii_nueva_e
+      - name: psa_census_2020_f2___iii_olongapo
+      - name: psa_census_2020_f2___iii_pampanga
+      - name: psa_census_2020_f2___iii_tarlac
+      - name: psa_census_2020_f2___iii_zambales
+      - name: psa_census_2020_f2___iv_a_batangas
+      - name: psa_census_2020_f2___iv_a_cavite
+      - name: psa_census_2020_f2___iv_a_laguna
+      - name: psa_census_2020_f2___iv_a_lucena
+      - name: psa_census_2020_f2___iv_a_quezon
+      - name: psa_census_2020_f2___iv_a_rizal
+      - name: psa_census_2020_f2___iv_b_marinduque2
+      - name: psa_census_2020_f2___iv_b_occ_mindoro
+      - name: psa_census_2020_f2___iv_b_or_mindoro
+      - name: psa_census_2020_f2___iv_b_palawan2
+      - name: psa_census_2020_f2___iv_b_puerto2
+      - name: psa_census_2020_f2___iv_b_romblon2
+      - name: psa_census_2020_f2___ix_isabela
+      - name: psa_census_2020_f2___ix_zamboanga_c
+      - name: psa_census_2020_f2___ix_zamboanga_dn
+      - name: psa_census_2020_f2___ix_zamboanga_ds
+      - name: psa_census_2020_f2___ix_zamboanga_s
+      - name: psa_census_2020_f2___ncr_caloocan
+      - name: psa_census_2020_f2___ncr_laspinas
+      - name: psa_census_2020_f2___ncr_makati
+      - name: psa_census_2020_f2___ncr_malabon
+      - name: psa_census_2020_f2___ncr_mandaluyong
+      - name: psa_census_2020_f2___ncr_manila
+      - name: psa_census_2020_f2___ncr_marikina
+      - name: psa_census_2020_f2___ncr_muntinlupa
+      - name: psa_census_2020_f2___ncr_navotas
+      - name: psa_census_2020_f2___ncr_paranaque
+      - name: psa_census_2020_f2___ncr_pasay
+      - name: psa_census_2020_f2___ncr_pasig
+      - name: psa_census_2020_f2___ncr_pateros
+      - name: psa_census_2020_f2___ncr_quezon
+      - name: psa_census_2020_f2___ncr_sanjuan
+      - name: psa_census_2020_f2___ncr_taguig
+      - name: psa_census_2020_f2___ncr_valenzuela
+      - name: psa_census_2020_f2___v_albay
+      - name: psa_census_2020_f2___v_cam_norte
+      - name: psa_census_2020_f2___v_cam_sur
+      - name: psa_census_2020_f2___v_catanduanes
+      - name: psa_census_2020_f2___v_masbate
+      - name: psa_census_2020_f2___v_sorsogon
+      - name: psa_census_2020_f2___vi_aklan
+      - name: psa_census_2020_f2___vi_antique
+      - name: psa_census_2020_f2___vi_bacolod
+      - name: psa_census_2020_f2___vi_capiz
+      - name: psa_census_2020_f2___vi_guimaras
+      - name: psa_census_2020_f2___vi_iloilo
+      - name: psa_census_2020_f2___vi_iloilo_c
+      - name: psa_census_2020_f2___vi_negros_occ
+      - name: psa_census_2020_f2___vii_bohol
+      - name: psa_census_2020_f2___vii_cebu
+      - name: psa_census_2020_f2___vii_cebu_c
+      - name: psa_census_2020_f2___vii_lapu
+      - name: psa_census_2020_f2___vii_mandaue
+      - name: psa_census_2020_f2___vii_negros_or
+      - name: psa_census_2020_f2___vii_siquijor
+      - name: psa_census_2020_f2___viii_biliran
+      - name: psa_census_2020_f2___viii_esamar
+      - name: psa_census_2020_f2___viii_leyte
+      - name: psa_census_2020_f2___viii_nsamar
+      - name: psa_census_2020_f2___viii_samar
+      - name: psa_census_2020_f2___viii_sleyte
+      - name: psa_census_2020_f2___viii_tacloban
+      - name: psa_census_2020_f2___x_bukidnon
+      - name: psa_census_2020_f2___x_cagayan_do
+      - name: psa_census_2020_f2___x_camiguin
+      - name: psa_census_2020_f2___x_iligan
+      - name: psa_census_2020_f2___x_lanao_dn
+      - name: psa_census_2020_f2___x_misamis_occ
+      - name: psa_census_2020_f2___x_misamis_or
+      - name: psa_census_2020_f2___xi_compostela
+      - name: psa_census_2020_f2___xi_davao_c
+      - name: psa_census_2020_f2___xi_davao_dn
+      - name: psa_census_2020_f2___xi_davao_ds
+      - name: psa_census_2020_f2___xi_davao_occ
+      - name: psa_census_2020_f2___xi_davao_or
+      - name: psa_census_2020_f2___xii_gensan
+      - name: psa_census_2020_f2___xii_ncotabato
+      - name: psa_census_2020_f2___xii_sarangani
+      - name: psa_census_2020_f2___xii_scotabato
+      - name: psa_census_2020_f2___xii_sultan
+      - name: psa_census_2020_f2___xiii_agusan_dn
+      - name: psa_census_2020_f2___xiii_agusan_ds
+      - name: psa_census_2020_f2___xiii_butuan
+      - name: psa_census_2020_f2___xiii_dinagat
+      - name: psa_census_2020_f2___xiii_surigao_dn
+      - name: psa_census_2020_f2___xiii_surigao_ds
+      - name: psa_census_2020___urban
+      
       - name: psa_census_2020_f3___all_regions
+      
+      - name: psa_census_2020_ref___citizenship
+      - name: psa_census_2020_ref___education
+      - name: psa_census_2020_ref___geography
+      - name: psa_census_2020_ref___marital_stat
+      - name: psa_census_2020_ref___region
+      - name: psa_census_2020_ref___sex
+      - name: psa_census_2020_ref___urban
+      
+      - name: comelec___voters_turnout_2022
+      - name: comelec___registered_voters_2025
+      
       - name: social_media_penetration
+
+      
   - name: clean_grp2
     database: clean_grp2
     tables:
@@ -14,6 +147,16 @@ sources:
       - name: stg_fact_internet
       - name: stg_internet_2020
       - name: stg_2019_social_media_penetration
+      - name: stg_demographics
+      - name: stg_dim_citizenship
+      - name: stg_dim_education
+      - name: stg_dim_marital_stat
+      - name: stg_dim_sex
+      - name: stg_dim_urban
+      - name: stg_registered_voters_2025
+      - name: stg_voter_turnout_2022
+
+      
   - name: mart_grp2
     database: mart_grp2
     tables:
